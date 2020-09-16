@@ -7,8 +7,8 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
 import com.mt.jetpack.databinding.ActivityViewModelBinding
-import com.mt.jetpack.model.User
-import com.mt.jetpack.viewmodel.ViewModelDemo
+import com.mt.lib_cache.model.User
+import com.mt.lib_cache.viewmodel.ViewModelDemo
 
 /**
  * @author : MaoTong

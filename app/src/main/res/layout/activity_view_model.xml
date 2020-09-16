@@ -6,7 +6,7 @@
     <data>
         <variable
             name="viewmodel"
-            type="com.mt.jetpack.viewmodel.ViewModelDemo" />
+            type="com.mt.lib_cache.viewmodel.ViewModelDemo" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

@@ -1,8 +1,8 @@
-package com.mt.jetpack.model
+package com.mt.lib_cache.model
 
 import androidx.databinding.BaseObservable
 import androidx.databinding.Bindable
-import com.mt.jetpack.BR
+import com.mt.lib_cache.BR
 
 /**
  *  @author : MaoTong

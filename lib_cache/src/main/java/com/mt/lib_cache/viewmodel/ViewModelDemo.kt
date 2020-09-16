@@ -1,9 +1,8 @@
-package com.mt.jetpack.viewmodel
+package com.mt.lib_cache.viewmodel
 
-import android.util.Log
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.mt.jetpack.model.User
+import com.mt.lib_cache.model.User
 
 /**
  * @author : MaoTong
@@ -20,10 +19,10 @@ import com.mt.jetpack.model.User
  * ================================================
  */
 class ViewModelDemo : ViewModel() {
-    var user: MutableLiveData<User>? = MutableLiveData<User>()
+    var user: MutableLiveData<com.mt.lib_cache.model.User>? = MutableLiveData<com.mt.lib_cache.model.User>()
         get() {
             if (field?.value == null) {
-                field?.value = User("name", "2")
+                field?.value = com.mt.lib_cache.model.User("name", "2")
             }
             return field
         }
