@@ -2,6 +2,8 @@ package com.mt.lib_cache.model
 
 import androidx.databinding.BaseObservable
 import androidx.databinding.Bindable
+import androidx.room.Entity
+import androidx.room.PrimaryKey
 import com.mt.lib_cache.BR
 
 /**
@@ -19,7 +21,15 @@ import com.mt.lib_cache.BR
  * <a href="https://github.com/Crazy-MT">Follow me</a>
  * ================================================
  */
-class User(s: String, s1: String): BaseObservable() {
+@Entity(tableName = "tb_user")
+class User constructor(): BaseObservable() {
+    @PrimaryKey
+    var u_id: Int = 0
+
+    constructor(s: String, s1: String) : this() {
+        name = s
+        age = s1
+    }
 
     var name: String? = null
         @Bindable
@@ -30,9 +40,4 @@ class User(s: String, s1: String): BaseObservable() {
         }
 
     var age: String? = null
-
-    init {
-        name = s
-        age = s1
-    }
 }

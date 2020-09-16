@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
 import com.mt.jetpack.databinding.ActivityViewModelBinding
+import com.mt.lib_cache.database.CacheDataBase
 import com.mt.lib_cache.model.User
 import com.mt.lib_cache.viewmodel.ViewModelDemo
 
@@ -46,5 +47,12 @@ class ViewModelActivity : AppCompatActivity() {
     fun setUser(view: View) {
         Log.e(TAG, ": MTMTMT click " + activityViewModel?.user?.value?.name)
         activityViewModel?.user?.postValue(activityViewModel?.user?.value)
+    }
+
+    fun dao(view: View) {
+        val userDao = CacheDataBase.getInstance().userDao()
+        activityViewModel?.user?.value?.let { userDao.insert(it) }
+
+        activityViewModel?.user?.postValue(userDao.loadById(0))
     }
 }
